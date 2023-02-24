@@ -9,8 +9,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.static(path.join(__dirname, 'public')));
 // Sets up the routes
 
-//Change dish-routes
-app.use(require('./controllers/dish-routes'));
+app.use(require('./controllers/meal-routes'));
 
 // Starts the server to begin listening
 app.listen(PORT, () => {
