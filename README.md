@@ -40,6 +40,9 @@ SO THAT I
 
 ### Built With:
 * (chart.js)
+* (Mysql)
+* (Handlebars)
+* (Heroku)
 
 ## Getting Started:
 To get a local copy up and running follow the steps below.
@@ -67,7 +70,7 @@ Currently no known issues, but track track [open issues](https://github.com/timo
 
 ## License:
 
-MIT License
+[![license](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 Copyright (c) [2023] [Elizabeth Lopez-Lopez, Peggy Diosa, Timothy Cook]
 
@@ -89,12 +92,16 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Contact:
-Elizabeth Lopez-Lopez - elizabethlopez0108@gmail.com
-Peggy Diosa - ruizpeggys@yahoo.com
-Timothy Cook - timothy.michael.cook@gmail.com
+## Questions Contact:
+If you have any questions, we can be reached by email:
+* Elizabeth Lopez-Lopez - elizabethlopez0108@gmail.com
+* Peggy Diosa - ruizpeggys@yahoo.com
+* Timothy Cook - timothy.michael.cook@gmail.com
 
-Project Link: [https://github.com/timothymichaelcook/trackmymeals.git](https://github.com/timothymichaelcook/trackmymeals.git)
+Github Project Link: [https://github.com/timothymichaelcook/trackmymeals.git](https://github.com/timothymichaelcook/trackmymeals.git)
+
+Deployed Project Link:
+
 
 ## Acknowledgements: 
 * University of Richmond Coding Bootcamp
