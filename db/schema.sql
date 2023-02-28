@@ -1,4 +1,3 @@
 -- boilerplate code
-DROP DATABASE IF EXISTS name_db;
-
-CREATE DATABASE name_db;
+DROP DATABASE IF EXISTS crowdfund_db;
+CREATE DATABASE crowdfund_db;
