@@ -39,10 +39,11 @@ SO THAT I
 * [style.css]()
 
 ### Built With:
-* (chart.js)
-* (Mysql)
-* (Handlebars)
-* (Heroku)
+* (chart.js) - https://www.chartjs.org/
+* (Mysql) - https://www.mysql.com/
+* (Sequelize) - https://sequelize.org/
+* (Handlebars) - https://handlebarsjs.com/
+* (Heroku) - https://www.heroku.com/
 
 ## Getting Started:
 To get a local copy up and running follow the steps below.
