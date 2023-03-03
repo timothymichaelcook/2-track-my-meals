@@ -1,34 +1,45 @@
-// P Note: Importing built-in DataTypes from sequelize documentation available online.
-const { Model, DataTypes } = require('sequelize'); 
+// Note: Importing built-in DataTypes from sequelize docs.
+
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}           // class Meal extends Model {}
+class Project extends Model {} // class Meal extends Model
 
-Project.init(                            // Meal.init(
+Project.init(
+  // Meal.init
   {
-    id: {                         
-      type: DataTypes.INTEGER,         
-      allowNull: false,                 //P Note: allowNull: false, -> this field cannot be left empty or null.
-      primaryKey: true,                 //P Note: primaryKey: true, ->this field will be the primaryKey for    
-      autoIncrement: true,                       // the table. The primaryKey id's each row in the table.
-    },                                  //P Note: autoIncrement: true,->Value for this row field increment +1
-    name: {                             // meal_name:  {                            // <- P code change.
-      type: DataTypes.STRING,         
-      allowNull: false,              
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    description: {                      // is_healthy: {                           // <- P code change.
-      type: DataTypes.STRING,           // type: DataTypes.BOOLEAN,                // <- P code change.
-                                        //allowNull: false,                        // <- P code change.
+    meal_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    date_created: {                     // meal_date: {                           // <- P code change.
+    meal_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: 'breakfast',
+      validate: {
+        isIn: ['breakfast', 'lunch', 'dinner'],
+      },
+    },
+    is_healthy: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    },
+    goal_met: {
+      type: DataTypes.BOOLEAN.INTEGER,
+      allowNull: false,
+    },
+    meal_date: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {                 // <- P Note: remove this model option.
-      type: DataTypes.FLOAT,          // <- P Note: remove.
-      allowNull: false,               // <- P Note: remove.
-    },                                // <- P Note: remove.
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -42,9 +53,9 @@ Project.init(                            // Meal.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',             //modelName:'meal',                       // <- P code change.
+    modelName: 'project', // modelName: 'meal'
   }
 );
 
-module.exports = Project;             //module.export = Meal;   // P Note: change file name -> Meal.js
-
+module.exports = Project; //module.export = Meal;
+// Note: change file name -> Meal.js
