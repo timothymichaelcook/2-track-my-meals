@@ -8,6 +8,7 @@ const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+// P Note: Set up Express App
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -39,6 +40,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// P Note: Set the routes
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
