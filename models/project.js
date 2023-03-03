@@ -23,7 +23,7 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
+    num_meals: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
