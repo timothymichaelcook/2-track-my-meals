@@ -4,18 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
+  <title>Track My Meals!</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
+  {{!-- chart code  --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
+        <span role="img" aria-label="plate">🍽️</span>
+        <a href="/">Track My Meals!</a>
       </h1>
+      <div  class="display-flex justify-space-between align-center p-2"> Join to begin being more mindful and start tracking your eating habits. Whether you just want 
+        to compare how many times you eat in or out, or you want to figure out how you will want to track 
+        your spending, join our site to start tracking your meals!</div>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
@@ -40,7 +45,7 @@
   <script src="/js/logout.js"></script>
   {{/if}}
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+   
 
 </body>
 

@@ -1,12 +1,9 @@
-// Note: Importing built-in DataTypes from sequelize docs.
-
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {} // class Meal extends Model
+class Project extends Model {}
 
 Project.init(
-  // Meal.init
   {
     id: {
       type: DataTypes.INTEGER,
@@ -14,31 +11,21 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    meal_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    meal_type: {
+    description: {
       type: DataTypes.STRING,
-      allowNull: false,
-      defaultValue: 'breakfast',
-      validate: {
-        isIn: ['breakfast', 'lunch', 'dinner'],
-      },
     },
-    is_healthy: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: false,
-    },
-    goal_met: {
-      type: DataTypes.BOOLEAN.INTEGER,
-      allowNull: false,
-    },
-    meal_date: {
+    date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
+    },
+    needed_funding: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -53,9 +40,8 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project', // modelName: 'meal'
+    modelName: 'project',
   }
 );
 
-module.exports = Project; //module.export = Meal;
-// Note: change file name -> Meal.js
+module.exports = Project;
