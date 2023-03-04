@@ -1,10 +1,10 @@
-
-
+//Importing dotenv to provide access to data inside dotenv file.
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
 let sequelize;
 
+// Creating a connection to a database
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
@@ -15,7 +15,7 @@ if (process.env.JAWSDB_URL) {
     {
       host: 'localhost',
       dialect: 'mysql',
-      port: 3306
+      port: 3306,
     }
   );
 }
