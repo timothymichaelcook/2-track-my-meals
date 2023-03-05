@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
     const projects = projectData.map((project) => project.get({ plain: true }));
 
     // Serialized data (tranlating data into a format that can be stored, transmitted and reconstructed later).
-    // Pass serialized data from projects into homepage template file to be viewed if logged into a session. If not logged into session a (500) Internal servic error will display.
+    // Pass serialized data from projects into homepage template file (rendered) to be viewed if logged into a session. If not logged into session a (500) Internal service error will display.
     res.render('homepage', {
       projects,
       logged_in: req.session.logged_in,
@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-//route handler function: Get request to retrieve a specific project by its id, along with the name of the user who created the project. Using .findyByPk (find by primary key).
+//route handler function: Get request to retrieve a project by its id, along with the name of the user who created the project. Using .findyByPk (find by primary key).
 router.get('/project/:id', async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
@@ -56,7 +56,7 @@ router.get('/project/:id', async (req, res) => {
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
+    // Find the logged in user based on the session ID, primary key.
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Project }],
@@ -75,7 +75,7 @@ router.get('/profile', withAuth, async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
+  // If the user is already logged in, redirect.
   if (req.session.logged_in) {
     res.redirect('/profile');
     return;
