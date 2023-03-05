@@ -3,8 +3,27 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {} // class Meal extends Model
+class Project extends Model {
+  // class Meal extends model
 
+  // Using a conditional statement to check per week if a user ate take-out (unhealthy). More than 3 is unhealthy -> true.
+  ateTakeOut() {
+    if (this.numberOftakeOut <= 3) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  // Using a conditional statement to check per month if a user ate too much take-out (unhealthy).
+  ateTooMuchTakeOut() {
+    if (this.numberOftakeOut > 12) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
 Project.init(
   // Meal.init
   {
@@ -26,13 +45,12 @@ Project.init(
         isIn: ['breakfast', 'lunch', 'dinner'],
       },
     },
-    is_healthy: {
-      type: DataTypes.BOOLEAN,
+    numberOftakeOut: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: false,
     },
     goal_met: {
-      type: DataTypes.BOOLEAN.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     meal_date: {
