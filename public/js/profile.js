@@ -3,14 +3,14 @@ const newFormHandler = async (event) => {
 
   const name = document.querySelector('#meal-name').value.trim();
   const numberOftakeOut = document.querySelector('#meal-funding').value.trim();
-  const description = document.querySelector('#meal-desc').value.trim();
+  const mealType = document.querySelector('#meal-type').value.trim();
 
-  if (name && numberOftakeOut && description) {
+  if (name && numberOftakeOut && meal_type) {
     const response = await fetch(`/api/meals`, {
       method: 'POST',
       body: JSON.stringify({
         meal_name: name,
-        description,
+        mealType,
         goal_met: true,
         numberOftakeOut: 100,
       }),

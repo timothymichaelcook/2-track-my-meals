@@ -37,9 +37,9 @@ Meal.init(
     meal_type: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: 'breakfast',
+      // defaultValue: 'breakfast',
       validate: {
-        isIn: ['breakfast', 'lunch', 'dinner'],
+        isIn: [['breakfast', 'lunch', 'dinner']],
       },
     },
     numberOftakeOut: {
