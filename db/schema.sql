@@ -1,6 +1,6 @@
--- change name to: mymealtracker_db;
+-- change name to: trackmymeals_db;
 
-DROP DATABASE IF EXISTS crowdfund_db; 
-CREATE DATABASE crowdfund_db;
+DROP DATABASE IF EXISTS trackmymeals_db; 
+CREATE DATABASE trackmymeals_db;
 
 

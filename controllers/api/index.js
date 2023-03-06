@@ -2,11 +2,11 @@
 // Importing .Router from 'express'
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
-const projectRoutes = require('./projectRoutes');
+const mealRoutes = require('./mealRoutes');
 
 // Defining the routes the router should handle.
 //userRoutes to handle '/users' request.
 router.use('/users', userRoutes);
-router.use('/projects', projectRoutes);
+router.use('/meals', mealRoutes);
 
 module.exports = router;

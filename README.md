@@ -27,9 +27,7 @@ View the [Github-pages]
 ### User Story
 
 ```
-AS A 
-I WANT 
-SO THAT I 
+In todays world keeping track of your food consumption is a huge thing, but life is also hectic and full of so many things happening at once that it makes it hard to keep track of what you're eating. We wanted to create an app to help a user input and keep track of how many meals they eat in and out of home to help a user keep track of their eating habits. 
 ```
 
 ### HTML:

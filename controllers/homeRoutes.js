@@ -1,13 +1,13 @@
-// Importing {Project} & {User) model data from /models folder.
+// Importing {Meal} & {User) model data from /models folder.
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Meal, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Http get request at '/' root endpoint. Handles request, send response.
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const projectData = await Project.findAll({
+    // Get all meals and JOIN with user data
+    const mealData = await Meal.findAll({
       include: [
         {
           model: User,
@@ -17,12 +17,12 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data to plain javascript so the template can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
+    const meals = mealData.map((meal) => meal.get({ plain: true }));
 
     // Serialized data (tranlating data into a format that can be stored, transmitted and reconstructed later).
-    // Pass serialized data from projects into homepage template file (rendered) to be viewed if logged into a session. If not logged into session a (500) Internal service error will display.
+    // Pass serialized data from meals into homepage template file (rendered) to be viewed if logged into a session. If not logged into session a (500) Internal service error will display.
     res.render('homepage', {
-      projects,
+      meals,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -30,10 +30,10 @@ router.get('/', async (req, res) => {
   }
 });
 
-//route handler function: Get request to retrieve a project by its id, along with the name of the user who created the project. Using .findyByPk (find by primary key).
-router.get('/project/:id', async (req, res) => {
+//route handler function: Get request to retrieve a meal by its id, along with the name of the user who created the meal. Using .findyByPk (find by primary key).
+router.get('/meal/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const mealData = await Meal.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -42,10 +42,10 @@ router.get('/project/:id', async (req, res) => {
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const meal = mealData.get({ plain: true });
 
-    res.render('project', {
-      ...project,
+    res.render('meal', {
+      ...meal,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -59,7 +59,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID, primary key.
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: Meal }],
     });
 
     const user = userData.get({ plain: true });
