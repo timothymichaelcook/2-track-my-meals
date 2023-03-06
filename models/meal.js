@@ -3,9 +3,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {
-  // class Meal extends model
-
+class Meal extends Model {
   // Using a conditional statement to check per week if a user ate take-out (unhealthy). More than 3 is unhealthy -> true.
   ateTakeOut() {
     if (this.numberOftakeOut <= 3) {
@@ -24,8 +22,7 @@ class Project extends Model {
     }
   }
 }
-Project.init(
-  // Meal.init
+Meal.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -71,9 +68,8 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project', // modelName: 'meal'
+    modelName: 'meal',
   }
 );
 
-module.exports = Project; //module.export = Meal;
-// Note: change file name -> Meal.js
+module.exports = Meal;
