@@ -1,63 +1,56 @@
 # TrackMyMeals
 
-Explore the [Project Page](https://github.com/timothymichaelcook/trackmymeals.git)
+## License:
 
-View the [Github-pages]
+[![license](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+
+## Description
+
+In todays world keeping track of your food consumption is a huge thing, but life is also hectic and full of so many things happening at once that it makes it hard to keep track of what you're eating. We wanted to create an app to help a user input and keep track of how many meals they eat in and out of home to help a user keep track of their eating habits.
 
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [User Story](#user-story)
-  * [HTML](#html)
-  * [Assets](#Assets)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#License)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+- [Track My Meals](#track-my-meals)
+- [License](#License)
+- [Description](#description)
+- [Technology Used](#technology-used)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Questions Contact](#questions-contact)
+- [Github Project Link](#github-project-link)
+- [Deployed Project Link](#deployed-project-link)
+- [Acknowledgements](#acknowledgements)
+- [Copyright](#copyright)
 
-## About the Project:
+### Technology Used:
 
-![Project Gif]
-
-### User Story
-
-```
-In todays world keeping track of your food consumption is a huge thing, but life is also hectic and full of so many things happening at once that it makes it hard to keep track of what you're eating. We wanted to create an app to help a user input and keep track of how many meals they eat in and out of home to help a user keep track of their eating habits. 
-```
-
-### HTML:
-* [index.html]()
-
-### Assets:
-* [style.css]()
-
-### Built With:
-* (chart.js) - https://www.chartjs.org/
-* (Mysql) - https://www.mysql.com/
-* (Sequelize) - https://sequelize.org/
-* (Handlebars) - https://handlebarsjs.com/
-* (Heroku) - https://www.heroku.com/
+- (chart.js) - https://www.chartjs.org/
+- (Mysql) - https://www.mysql.com/
+- (Sequelize) - https://sequelize.org/
+- (Handlebars) - https://handlebarsjs.com/
+- (Heroku) - https://www.heroku.com/
 
 ## Getting Started:
-To get a local copy up and running follow the steps below.
 
-### Prerequisites:
-None.
+- To get a local copy up and running follow the steps below.
 
 ### Installation:
+
 1. Clone the Repository:
+
 ```sh
 git clone https://github.com/timothymichaelcook/trackmymeals.git
 ```
 
-## Roadmap:
-Currently no known issues, but track track [open issues](https://github.com/timothymichaelcook/trackmymeals.git/issues ) for proposed features (and known issues) in the future.
+## Screenshot:
 
+-
+
+## Roadmap:
+
+Currently no known issues, but track [open issues] at (https://github.com/timothymichaelcook/trackmymeals.git/issues) for proposed features (and known issues) in the future.
 
 ## Contributing:
 
@@ -67,40 +60,26 @@ Currently no known issues, but track track [open issues](https://github.com/timo
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License:
-
-[![license](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
-
-Copyright (c) [2023] [Elizabeth Lopez-Lopez, Peggy Diosa, Timothy Cook]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
 ## Questions Contact:
+
 If you have any questions, we can be reached by email:
-* Elizabeth Lopez-Lopez - elizabethlopez0108@gmail.com
-* Peggy Diosa - ruizpeggys@yahoo.com
-* Timothy Cook - timothy.michael.cook@gmail.com
 
-Github Project Link: [https://github.com/timothymichaelcook/trackmymeals.git](https://github.com/timothymichaelcook/trackmymeals.git)
+- Elizabeth Lopez-Lopez - elizabethlopez0108@gmail.com
+- Peggy Diosa - ruizpeggys@yahoo.com
+- Timothy Cook - timothy.michael.cook@gmail.com
 
-Deployed Project Link:
+## Github Project Link:
 
+- [https://github.com/timothymichaelcook/trackmymeals.git](https://github.com/timothymichaelcook/trackmymeals.git)
 
-## Acknowledgements: 
-* University of Richmond Coding Bootcamp
+## Deployed Project Link:
+
+-
+
+## Acknowledgements:
+
+- University of Richmond Coding Bootcamp
+
+## Copyright:
+
+- Copyright (c) [2023] [Elizabeth Lopez-Lopez, Peggy Diosa, Timothy Cook]
