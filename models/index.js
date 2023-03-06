@@ -1,7 +1,7 @@
 // Importing ./User file and ./Project file into this file.
 
-const User = require('./User');
-const Meal = require('./Meal');
+const User = require('./user');
+const Meal = require('./meal');
 
 //Using onDelete:'CASCADE to delete all associated informaton for any user who has been deleted.
 User.hasMany(Meal, {
