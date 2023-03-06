@@ -2,15 +2,14 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#meal-name').value.trim();
-  const num_meals = document.querySelector('#meal-funding').value.trim();
+  const numberOftakeOut = document.querySelector('#meal-funding').value.trim();
   const description = document.querySelector('#meal-desc').value.trim();
 
-  if (name && num_meals && description) {
+  if (name && numberOftakeOut && description) {
     const response = await fetch(`/api/meals`, {
       method: 'POST',
       body: JSON.stringify({
         meal_name: name,
-        num_meals,
         description,
         goal_met: true,
         numberOftakeOut: 100,
@@ -49,7 +48,7 @@ document
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('.meal-list')
   .addEventListener('click', delButtonHandler);
 
 // chart code
@@ -57,11 +56,19 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    labels: [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ],
     datasets: [
       {
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: '# of Meals Eaten out This Week',
+        data: [2, 1, 0, 3, 0, 5, 4],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',

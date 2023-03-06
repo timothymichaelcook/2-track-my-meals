@@ -5,12 +5,12 @@
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
-      <a href="/meal/{{meal.id}}">{{meal.name}}</a>
+      <a href="/meal/{{meal.id}}">{{meal.meal_name}}</a>
     </h2>
     <p>
       <span for="img" aria-label="drinks">🍻</span>
       <!-- Pass needed_funding value to the helper function -->
-      <span class="meals-amount">{{format_amount meal.num_meals}}</span>
+      <span class="meals-amount">{{format_amount meal.numberOfTakeOut}}</span>
       meals eaten out!
     </p>
     <p>Created by {{meal.user.name}} on {{format_date meal.date_created}}</p>
