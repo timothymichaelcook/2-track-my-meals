@@ -1173,6 +1173,7 @@ label form [type='radio'] {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  backdrop-filter: blur(15px)
 }
 
 .container.container-fluid {
