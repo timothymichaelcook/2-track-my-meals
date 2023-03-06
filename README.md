@@ -6,7 +6,7 @@
 
 ## Description
 
-In todays world keeping track of your food consumption is a huge thing, but life is also hectic and full of so many things happening at once that it makes it hard to keep track of what you're eating. We wanted to create an app to help a user input and keep track of how many meals they eat in and out of home to help a user keep track of their eating habits.
+- In todays world keeping track of your food consumption is a huge thing, but life is also hectic and full of so many things happening at once that it makes it hard to keep track of what you're eating. We wanted to create an app to help a user input and keep track of how many meals they eat in and out of home to help a user keep track of their eating habits.
 
 ## Table of Contents
 
@@ -24,7 +24,7 @@ In todays world keeping track of your food consumption is a huge thing, but life
 - [Acknowledgements](#acknowledgements)
 - [Copyright](#copyright)
 
-### Technology Used:
+## Technology Used:
 
 - (chart.js) - https://www.chartjs.org/
 - (Mysql) - https://www.mysql.com/
@@ -36,7 +36,7 @@ In todays world keeping track of your food consumption is a huge thing, but life
 
 - To get a local copy up and running follow the steps below.
 
-### Installation:
+## Installation:
 
 1. Clone the Repository:
 
@@ -50,7 +50,7 @@ git clone https://github.com/timothymichaelcook/trackmymeals.git
 
 ## Roadmap:
 
-Currently no known issues, but track [open issues] at (https://github.com/timothymichaelcook/trackmymeals.git/issues) for proposed features (and known issues) in the future.
+- Currently no known issues, but track [open issues] at (https://github.com/timothymichaelcook/trackmymeals.git/issues) for proposed features (and known issues) in the future.
 
 ## Contributing:
 
