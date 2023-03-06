@@ -48,8 +48,8 @@
     </form>
   </div>
 
+<div class='col-md-6 meal-list'></div>
   {{#if meals.length}}
-    <div class='col-md-6 meal-list'>
       <h3>Current Meals:</h3>
 
       {{#each meals as |meal|}}
@@ -57,16 +57,17 @@
           <div class='col-md-8'>
             <h4><a href='/meal/{{meal.id}}'>{{meal.meal_name}}</a></h4>
           </div>
-          <div class='col-md-4'>
+          {{!-- <div class='col-md-4'>
             <button
               class='btn btn-sm btn-danger'
               data-id='{{meal.id}}'
             >DELETE</button>
-          </div>
+          </div> --}}
         </div>
       {{/each}}
-    </div>
+    
   {{/if}}
+  </div>
 </div>
 
 {{! chart code }}
