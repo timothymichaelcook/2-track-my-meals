@@ -1,52 +1,60 @@
-<div class="row">
-  <div class="col-auto">
+<div class='row'>
+  <div class='col-auto'>
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
+<div class='row mt-4'>
+  <div class='col-md-6'>
     <h3>Create a New Meal:</h3>
 
-    <form class="form new-meal-form">
-      <div class="form-group">
-        <label for="meal-name">Meal name:</label>
-        <input class="form-input" type="text" id="meal-name" name="meal-name" />
+    <form class='form new-meal-form'>
+      <div class='form-group'>
+        <label for='meal-name'>Meal name:</label>
+        <input class='form-input' type='text' id='meal-name' name='meal-name' />
       </div>
-      <div class="form-group">
-        <label for="meal-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="meal-funding" name="meal-funding" />
+      <div class='form-group'>
+        <label for='meal-funding'>needed funding ($):</label>
+        <input
+          class='form-input'
+          type='number'
+          id='meal-funding'
+          name='meal-funding'
+        />
       </div>
-      <div class="form-group">
-        <label for="meal-desc">description:</label>
-        <textarea class="form-input" id="meal-desc" name="meal-desc"></textarea>
+      <div class='form-group'>
+        <label for='meal-desc'>description:</label>
+        <textarea class='form-input' id='meal-desc' name='meal-desc'></textarea>
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+      <div class='form-group'>
+        <button type='submit' class='btn btn-primary'>Create</button>
       </div>
     </form>
   </div>
 
   {{#if meals.length}}
-  <div class="col-md-6 meal-list">
-    <h3>Current Peals:</h3>
+    <div class='col-md-6 meal-list'>
+      <h3>Current Meals:</h3>
 
-    {{#each meals as |meal|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/meal/{{meal.id}}">{{meal.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{meal.id}}">DELETE</button>
-      </div>
+      {{#each meals as |meal|}}
+        <div class='row mb-2'>
+          <div class='col-md-8'>
+            <h4><a href='/meal/{{meal.id}}'>{{meal.meal_name}}</a></h4>
+          </div>
+          <div class='col-md-4'>
+            <button
+              class='btn btn-sm btn-danger'
+              data-id='{{meal.id}}'
+            >DELETE</button>
+          </div>
+        </div>
+      {{/each}}
     </div>
-    {{/each}}
-  </div>
   {{/if}}
 </div>
 
-{{!-- chart code --}}
-<div class="chart">
-      <canvas id="myChart" width="400" height="200"></canvas>
-    </div>
-<script src="./js/profile.js"></script>
+{{! chart code }}
+<div class='chart'>
+  <canvas id='myChart' width='400' height='200'></canvas>
+</div>
+<script src='./js/profile.js'></script>

@@ -1,0 +1,31 @@
+[
+ 
+    {
+      "user_id": 100,
+      "meal_name": "January Data",
+      "description": "In January I wanted to get a basis for how many times I typically eat out in a month.",
+      "num_meals": 10,
+      "goal_met": true,
+      "numberOftakeOut": 100
+
+    },
+    {
+      "user_id": 100,
+      "meal_name": "February",
+      "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
+      "num_meals": 10000,
+      "goal_met": true,
+      "numberOftakeOut": 100
+
+    },
+    {
+      "user_id": 100,
+      "meal_name": "Roll 'Em Up",
+      "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
+      "num_meals": 800,
+      "goal_met": true,
+      "numberOftakeOut": 100
+
+    }
+  ]
+  
