@@ -4,12 +4,14 @@ const newFormHandler = async (event) => {
   const name = document.querySelector('#meal-name').value.trim();
   const numberOftakeOut = document.querySelector('#meal-funding').value.trim();
   const mealType = document.querySelector('#meal-type').value.trim();
+  const dayOfWeek= document.querySelector('#day-week').value.trim();
 
-  if (name && numberOftakeOut && meal_type) {
+  if (name && day_week && numberOftakeOut && meal_type) {
     const response = await fetch(`/api/meals`, {
       method: 'POST',
       body: JSON.stringify({
         meal_name: name,
+        dayOfWeek:string,
         mealType,
         goal_met: true,
         numberOftakeOut: 100,

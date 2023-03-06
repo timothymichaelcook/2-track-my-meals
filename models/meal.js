@@ -34,10 +34,17 @@ Meal.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    day_week: {
+      type: DataTypes.STRING,
+      // allowNull: false,
+      validate: {
+        isIn: [['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']],
+      },
+    },
     meal_type: {
       type: DataTypes.STRING,
       allowNull: false,
-      // defaultValue: 'breakfast',
+      defaultValue: 'breakfast',
       validate: {
         isIn: [['breakfast', 'lunch', 'dinner']],
       },
