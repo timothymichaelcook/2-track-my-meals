@@ -1,11 +1,11 @@
 <div class="text-center">
-  <h2>{{name}}</h2>
+  <h2>{{meal_name}}</h2>
   <p>{{{get_emoji}}}</p>
   <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <p>Created by {{user.name}} on {{format_date meal_date}}</p>
   <p>
     <span for="img" aria-label="bowl">🥣</span>
-    <span class="meals eated">{{format_amount numberOfTakeOut}}</span>
+    <span class="meals eated">{{ numberOftakeOut}}</span>
     eaten out!
   </p>
   <p>
