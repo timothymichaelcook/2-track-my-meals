@@ -6,15 +6,15 @@ const newFormHandler = async (event) => {
   const mealType = document.querySelector('#meal-type').value.trim();
   const dayOfWeek= document.querySelector('#day-week').value.trim();
 
-  if (name && day_week && numberOftakeOut && meal_type) {
+  if (name && dayOfWeek && numberOftakeOut && mealType) {
     const response = await fetch(`/api/meals`, {
       method: 'POST',
       body: JSON.stringify({
         meal_name: name,
-        dayOfWeek:string,
-        mealType,
+        day_week: dayOfWeek,
+        meal_type: mealType,
         goal_met: true,
-        numberOftakeOut: 100,
+        numberOftakeOut,
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -49,9 +49,9 @@ document
   .querySelector('.new-meal-form')
   .addEventListener('submit', newFormHandler);
 
-document
-  .querySelector('.meal-list')
-  .addEventListener('click', delButtonHandler);
+// document
+//   .querySelector('.meal-list')
+//   .addEventListener('click', delButtonHandler);
 
 // chart code
 var ctx = document.getElementById('myChart').getContext('2d');
