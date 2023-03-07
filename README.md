@@ -46,7 +46,9 @@ git clone https://github.com/timothymichaelcook/trackmymeals.git
 
 ## Screenshot:
 
-![Project Screenshot](./assets/images/screenshot5.png)
+
+- ![Project Screenshot](./assets/images/screenshot5.png)
+
 
 ## Roadmap:
 
@@ -74,7 +76,8 @@ If you have any questions, we can be reached by email:
 
 ## Deployed Project Link:
 
--  [https://sleepy-coast-17586.herokuapp.com/](https://sleepy-coast-17586.herokuapp.com/)
+- [https://sleepy-coast-17586.herokuapp.com/](https://sleepy-coast-17586.herokuapp.com/)
+
 
 ## Acknowledgements:
 
